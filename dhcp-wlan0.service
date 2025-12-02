@@ -1,0 +1,9 @@
+[Unit]
+Description=DHCP for wlan0
+After=wifi.service
+
+[Service]
+ExecStart=/sbin/dhclient wlan0
+
+[Install]
+WantedBy=multi-user.target
